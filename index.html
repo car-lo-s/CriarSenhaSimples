@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>password hint</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        color: white;
+        opacity: 0.4;
+      }
+      body {
+        background-color: #032436;
+      }
+      button {
+        padding: 10px;
+        text-align: center;
+        border: solid 2px white;
+        border-radius: 20px;
+        /* box-sizing: border-box; */
+      }
+      button:hover {
+        opacity: 0.7;
+        border: solid 2px black;
+      }
+      .idente {
+        text-align: center;
+        color: white;
+      }
+      .mensagem {
+        font-size: 0.8em;
+        opacity: 0.5;
+        margin-bottom: 10px;
+      }
+      .corpo {
+        min-height: 550px;
+        width: 500px;
+        background-color: white;
+        margin: auto;
+      }
+      .corpo h1 {
+        text-align: center;
+        padding: 30px;
+        font-family: "Staatliches", cursive;
+      }
+      .opcao {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        font-family: "Fredoka One", cursive;
+      }
+      .opcao button {
+        width: 70px;
+        margin: 0 auto;
+      }
+      .opcao input {
+        margin-bottom: 10px;
+      }
+      .resultado {
+        height: 190px;
+        margin: 10px auto;
+        /* margin-bottom:40px; */
+        width: 80%;
+        background-color: #95d1f1;
+        border: solid 2px black;
+        padding: 20px;
+        overflow-y: scroll;
+      }
+
+      #quant {
+        width: 50px;
+      }
+      @media (max-width: 600px) {
+        .corpo {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="corpo">
+      <h1>password hint</h1>
+      <div class="opcao">
+        Quantidade de caracteres:
+        <input type="number" name="quant" id="quant" /> Letras:<input
+          type="checkbox"
+          name="letra"
+          id="letra"
+        />
+        Numeros: <input type="checkbox" name="numero" id="numero" /> Caracteres
+        especiais: <input type="checkbox" name="especial" id="especial" /> Caixa
+        alta: <input type="checkbox" name="alta" id="alta" />
+        <button id="envio">Enviar</button>
+        <div class="resultado">Olá, Tudo bem?</div>
+        <p class="mensagem">
+          * Se faltar na resposta uma das opções marcadas, é só enviar de novo
+          :)
+        </p>
+      </div>
+    </section>
+    <p class="idente">&copy;Carlos R</p>
+    <script src="./gerador.js"></script>
+  </body>
+</html>
